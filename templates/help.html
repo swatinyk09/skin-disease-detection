@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Information</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="{{ url_for('index') }}"> 
+                <img src="{{ url_for('static', filename='brightness.png') }}" alt="Logo" style="height: 40px;">
+                Dermatolite
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('consultancy')}}">Consultancy</a></li>
+            <li><a href="{{ url_for('help_page') }}">Help</a></li>
+            <li><a href="{{ url_for('account') }}">Account</a></li>
+        </ul>
+    </nav>
+
+    <main class="help-container">
+        <section class="about">
+            <h1>About This Website</h1>
+            <p>
+                Our skin disease detection platform leverages cutting-edge machine learning algorithms to assist in the early detection of common skin conditions. By uploading an image of the affected skin area, users can receive a preliminary analysis and possible suggestions for care or further medical evaluation.
+            </p>
+        </section>
+
+        <section class="awareness">
+            <h2>Skin Disease Awareness</h2>
+            <p>
+                Skin diseases can vary greatly in appearance and severity. Below is an overview of some conditions detected by our platform. Early detection and professional diagnosis are crucial for effective management and treatment.
+            </p>
+            <div class="disease-list">
+                <div class="disease-item">
+                    <h3>Actinic Keratoses and Intraepithelial Carcinoma (akiec)</h3>
+                    <p>
+                        Precancerous skin lesions caused by sun damage. Actinic Keratoses are rough, scaly patches caused by prolonged sun exposure. They can develop into squamous cell carcinoma if untreated. Intraepithelial carcinoma refers to early-stage cancer that remains confined to the top layer of the skin, making early detection crucial.
+                    </p>
+                </div>
+                <div class="disease-item">
+                    <h3>Basal Cell Carcinoma (bcc)</h3>
+                    <p>
+                        Basal cell carcinoma is the most common form of skin cancer. It typically appears as a shiny, pearly bump, a red patch, or a non-healing sore, primarily in sun-exposed areas like the face and neck. Though it grows slowly and rarely spreads, prompt treatment is necessary to prevent local tissue damage.
+                    </p>
+                </div>
+                <div class="disease-item">
+                    <h3>Benign Keratosis-like Lesions (bkl)</h3>
+                    <p>
+                        Benign keratosis-like lesions include harmless skin growths such as seborrheic keratosis or solar lentigo. These lesions often appear as brown, tan, or black spots and are common in older adults. While they are non-cancerous, distinguishing them from malignant lesions may require professional evaluation.
+                    </p>
+                </div>
+                <div class="disease-item">
+                    <h3>Dermatofibroma (df)</h3>
+                    <p>
+                        Dermatofibroma is a benign skin growth, often appearing as a small, firm, raised bump that may feel tender or itchy. They are generally harmless and can result from minor skin injuries or insect bites, commonly occurring on the legs or arms.
+                    </p>
+                </div>
+                <div class="disease-item">
+                    <h3>Melanoma (mel)</h3>
+                    <p>
+                        Melanoma is a serious form of skin cancer that arises from melanocytes, the pigment-producing cells. It may appear as a new or existing mole with irregular borders, uneven color, or increasing size. Early detection and treatment are critical, as melanoma can spread rapidly to other parts of the body.
+                    </p>
+                </div>
+                <div class="disease-item">
+                    <h3>Melanocytic Nevi (nv)</h3>
+                    <p>
+                        Melanocytic nevi, commonly known as moles, are benign growths of melanocytes. They can range in color from pink to dark brown and vary in size. While most moles are harmless, any changes in appearance should be checked for potential malignancy.
+                    </p>
+                </div>
+                <div class="disease-item">
+                    <h3>Vascular Lesions (vasc)</h3>
+                    <p>
+                        Vascular lesions include conditions like hemangiomas or angiomas, which result from abnormal blood vessels. These lesions may appear as red or purple spots on the skin and are typically benign. In some cases, they may require treatment for cosmetic reasons or discomfort.
+                    </p>
+                </div>
+            </div>
+        </section>        
+
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <p>
+                If you have questions, feedback, or require support, please get in touch with us:
+            </p>
+            <ul>
+                <li><b>Email:</b> support@skindetection.com</li>
+                <li><b>Phone:</b> +1-800-555-1234</li>
+                <li><b>Address:</b> 123 SkinCare Avenue, HealthyCity, WellnessState, 56789</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Skin Disease Detection. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

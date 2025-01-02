@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Disease Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="{{ url_for('index') }}"> 
+                <img src="{{ url_for('static', filename='brightness.png') }}" alt="Logo" style="height: 40px;">
+                Dermatolite
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('consultancy')}}">Consultancy</a></li>
+            <li><a href="{{ url_for('help_page') }}">Help</a></li>
+            <li><a href="{{ url_for('account') }}">Account</a></li>
+        </ul>
+    </nav>
+
+    <div class="main">
+        <div class="dash-container">
+            <h2>Welcome to Dermatolite</h2>
+            <p>This dashboard uses advanced machine learning to assist in identifying common skin conditions. 
+                Upload an image of a skin lesion to receive predictions and detailed information about possible conditions.
+            </p>
+
+            <form class="uploadForm" id="uploadForm" enctype="multipart/form-data">
+                <input type="file" id="imageFile" name="file" required>
+                <button class="analyzebtn" type="submit">Analyze</button>
+            </form>
+
+            <div class="result" id="result"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
+
